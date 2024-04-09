@@ -16,23 +16,34 @@ import Homepage from './screens/Homepage/Homepage.jsx'
 import './App.css'
 
 
-
 function App() {
+  const [user, setUser] = useState(null);
+
+  // useEffect(() => {
+  //   const fetchUser = async () => {
+  //     const user = await verifyUser();
+  //     user ? setUser(user) : setUser(null);
+  //   };
+
+  //   fetchUser();
+  // }, []);
+
+
   return (
     <div className="App">
-      {/* <Nav />
+      <Nav user={user}/>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<Homepage />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register setUser={setUser} />}/>
+        <Route path="/login" element={<Login setUser={setUser}/>} />
         <Route path="/sign-out" element={<SignOut />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile/edit" element={<ProfileEdit />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/matched-page" element={<MatchedPage />} />
         <Route path="/matching-page" element={<MatchingPage />} />
-      </Routes> */}
+      </Routes>
     </div>
   );
 }
