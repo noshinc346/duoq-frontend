@@ -20,7 +20,7 @@ import './App.css'
 function App() {
   return (
     <div className="App">
-      <Nav />
+      {/* <Nav />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<Homepage />} />
@@ -32,7 +32,7 @@ function App() {
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/matched-page" element={<MatchedPage />} />
         <Route path="/matching-page" element={<MatchingPage />} />
-      </Routes>
+      </Routes> */}
     </div>
   );
 }
