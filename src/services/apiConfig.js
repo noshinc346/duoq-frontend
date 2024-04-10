@@ -11,7 +11,7 @@ const api = axios.create({
   baseURL:
     process.env.NODE_ENV === "production"
       ? "https://duoq-app.herokuapp.com"
-      : "http://localhost:8000",
+      : "http://127.0.0.1:8000",
 });
 
 api.interceptors.request.use(

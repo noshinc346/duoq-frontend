@@ -2,7 +2,7 @@ import api from "./apiConfig.js";
 
 export const signUp = async (credentials) => {
   try {
-    const resp = await api.post("/users/register/", credentials);
+    const resp = await api.post("/user/register/", credentials);
     localStorage.setItem("token", resp.data.access);
     return resp.data.user;
   } catch (error) {
@@ -12,7 +12,7 @@ export const signUp = async (credentials) => {
 
 export const signIn = async (credentials) => {
   try {
-    const resp = await api.post("/users/login/", credentials);
+    const resp = await api.post("/user/login/", credentials);
     localStorage.setItem("token", resp.data.access);
     return resp.data.user;
   } catch (error) {
