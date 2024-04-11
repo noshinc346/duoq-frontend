@@ -3,14 +3,14 @@ import Valorant from '../../assets/valorant.jpg'
 import League from '../../assets/leagueoflegends.jpg'
 import BG3 from '../../assets/bg3.jpg'
 import Minecraft from '../../assets/minecraft.jpg'
-import DuoControllerMp4 from '../../assets/duocontrollers.mp4'
+// import DuoControllerMp4 from '../../assets/duocontrollers.mp4'
 import './LandingPage.css'
 
 function LandingPage() {
   return (
   <div className="landing-page">
     <div className="overlay"></div>
-    <video className="lp-video" src={DuoControllerMp4} autoPlay loop muted />
+    {/* <video className="lp-video" src={DuoControllerMp4} autoPlay loop muted /> */}
     <div className="lp-content">
       <div className="lp-container">
         <div className="lp-container-one">
