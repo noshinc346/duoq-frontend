@@ -2,6 +2,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signUp } from "../../services/user.js";
 import './Register.css'
+import pinkcontroller from "../../assets/pinkcontroller2.png"
+import Marquee from "../../components/Marquee/Marquee.jsx";
+import nintendo from "../../assets/nintendo (1).png";
 
 function Register({ setUser }) {
   const navigate = useNavigate();
@@ -61,6 +64,10 @@ function Register({ setUser }) {
 
   return (
     <div className="registerpage-body">
+      <Marquee />
+      <div className="nintendo-container">
+        <img className="nintendo-switch" src={nintendo} />
+      </div>
       <div className="register-form-container">
         <form className="register-form" onSubmit={handleSubmit}>
         <img className="icon-controller" src="https://i.imgur.com/WTCZ8sC.png" alt="Icon Description"/>
@@ -119,9 +126,9 @@ function Register({ setUser }) {
           <p className="terms">By clicking on Create Account, you agree to our <span class="underline">Terms of Service</span>.</p>
           <p className="privacy">To learn more about how U.GG collects, uses, shares and protects your personal data please read our <span class="underline">Privacy Policy</span>.</p>
           <button className="register-button" type="submit">Register</button>
-          {/* {renderError()} */}
         </form>
       </div>
+
     </div>
   )
 }
