@@ -3,6 +3,7 @@ import axios from "axios";
 const getToken = () => {
   return new Promise((resolve) => {
     const token = localStorage.getItem("token");
+    // const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEyOTMxNzg3LCJpYXQiOjE3MTI4NDUzODcsImp0aSI6IjJmMzMxNGJjZDBkNDQzYzM4ZDk3NDFlODk3ZWU1MTlmIiwidXNlcl9pZCI6OH0.mKHWR-6geM90TT128QfBM4UQgTRPvsiTy6pg-d8CTU4"
     resolve(token ? `Bearer ${token}` : null);
   });
 };
