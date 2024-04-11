@@ -1,0 +1,31 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(39, 71, 110);
+}
+
+.logo-name{
+    font-family: 'DO Futuristic', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFF1EB;
+    margin: .5em .5em;
+    text-decoration: none;
+}
+
+button{
+    margin: .5em .5em;
+    background-color: #D8315B;
+    border-radius: 10px;
+    border: none;
+}
+
+.login-button a{
+    color: #FFF1EB;
+    font-family: "video", serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin: .5em .5em;
+    font-size: 14px;
+}
