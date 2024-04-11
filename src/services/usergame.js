@@ -21,7 +21,7 @@ export const addUserGame = async (id, userGameData) => {
 export const getAUserGame = async (gameid) => {
 	try {
 		const resp = await api.get(`/games/usergames/detail/${gameid}/`);
-		return response.data;
+		return resp.data;
 	} catch (error) {
 		throw error;
 	}
@@ -30,7 +30,7 @@ export const getAUserGame = async (gameid) => {
 export const editUserGame = async (gameid, newData) => {
 	try {
 		const resp = await api.put(`/games/usergames/detail/${gameid}/`, newData);
-		return response.data;
+		return resp.data;
 	} catch (error) {
 		throw error;
 	}
@@ -39,7 +39,7 @@ export const editUserGame = async (gameid, newData) => {
 export const deleteUserGame = async (gameid) => {
 	try {
 		const resp = await api.delete(`/games/usergames/detail/${gameid}/`);
-		return response.data;
+		return resp.data;
 	} catch (error) {
 		throw error;
 	}
