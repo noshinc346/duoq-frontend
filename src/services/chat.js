@@ -1,48 +1,56 @@
 import api from "./apiConfig.js";
 
-export const getGames = async () => {
+export const getChats = async () => {
   try {
-    const resp = await api.get("/games/");
+    const resp = await api.get("/chat/");
     return resp.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const getGame = async (id) => {
+export const getChat = async (otherid) => {
   try {
-    const resp = await api.get(`/games/${id}/`);
+    const resp = await api.get(`/chat/${otherid}/`);
     return resp.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const addGame = async (gameData) => {
+export const addChat = async (chatData) => {
   try {
-    const resp = await api.post("/games/", gameData);
+    const resp = await api.post("/chat/", chatData);
     return resp.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const editGame = async (id, gameData) => {
+export const deleteChat = async (otherid) => {
 	try {
-  		const resp = await api.put(`/games/${id}/`, gameData);
-  		return resp.data;
-  	} catch (error) {
-    		throw error;
-  	}
-};
-
-export const deleteGame = async (id) => {
-	try {
-		const resp = await api.delete(`/games/${id}/`);
+		const resp = await api.delete(`/chat/${otherid}/`);
 		return resp.data;
 	} catch (error) {
 		throw error;
 	}
 };
 
+export const getMesssages = async (chatid) => {
+  try {
+    const resp = await api.get(`/chat/messages/${chatid}/`);
+    return resp.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const addMessage = async (chatid, chatData) => {
+  try {
+    const resp = await api.post(`/chat/message/${chatid}/`, chatData);
+    return resp.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
