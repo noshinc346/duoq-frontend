@@ -4,6 +4,7 @@ import BG3 from '../../assets/bg3.jpg'
 import Minecraft from '../../assets/minecraft.jpg'
 import DuoControllers from '../../assets/duocontrollers.mp4'
 import Footer from '../../components/Footer/Footer.jsx'
+
 import './LandingPage.css'
 
 function LandingPage() {
@@ -12,6 +13,10 @@ function LandingPage() {
 
   return (
   <div className="landing-page">
+
+    <div className="overlay"></div>
+    
+    <div className="lp-content">
       <div className="lp-container">
       <video className="lp-video" src={DuoControllers} autoPlay loop muted />
         <div className="lp-container-one">
