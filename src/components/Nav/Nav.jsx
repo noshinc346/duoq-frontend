@@ -9,7 +9,6 @@ const authenticatedOptions = (
   </>
 )
   
-
 const unauthenticatedOptions = (
   <>
   <button className="login-button"><NavLink className="link" to="/login">Login</NavLink></button>
@@ -28,9 +27,6 @@ function Nav({ user }) {
       <nav className="navbar">
         {alwaysOptions}
         {user ? authenticatedOptions : unauthenticatedOptions}
-
-        {/* <p className="logo">DuoQ</p>
-        <button><NavLink to="/" className="login-button">Login</NavLink></button> */}
       </nav>
 
     </div>
