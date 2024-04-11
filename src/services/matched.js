@@ -1,3 +1,5 @@
+import api from "./apiConfig.js";
+
 export const getMatches = async () => {
   try {
     const resp = await api.get("/user/matches/");
