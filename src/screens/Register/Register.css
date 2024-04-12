@@ -71,7 +71,7 @@
     align-items: center;
     width: -moz-fit-content;
     width: 30%;
-    margin: 70px auto 0;
+    margin: 0 auto 0;
     padding: 80px 40px 20px;
     border-radius: 8%;
     background-color: #27476eb0;
@@ -115,4 +115,27 @@
 
 .underline {
     text-decoration: underline;
+}
+
+.pink-controller {
+    object-fit: cover;
+    position: absolute;
+    width: 80vw;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    transform: rotate(-10deg); /* Adjust the angle as needed */
+}
+
+.nintendo-container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.nintendo-switch {
+    width: 75vw;
+    height: auto;
+    margin: auto 0;
+    position: absolute;
 }

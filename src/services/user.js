@@ -32,9 +32,18 @@ export const signOut = async () => {
 export const verifyUser = async () => {
   const token = localStorage.getItem("token");
   if (token) {
-    const resp = await api.get("/users/token/refresh/");
+    const resp = await api.get("/user/token/refresh/");
     localStorage.setItem("token", resp.data.access);
     return resp.data.user;
   }
   return false;
+};
+
+export const getUserId = async () => {
+	try {
+		const resp = await api.get("user/token/refresh/");
+		return resp.data.user.id
+	} catch (error) {
+		throw error;
+	}
 };

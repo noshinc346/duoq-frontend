@@ -1,0 +1,21 @@
+.marquee-container {
+    overflow: hidden;
+    width: 100vw; /* Span the entire viewport width */
+    margin: 0; /* Reset margin to remove any default spacing */
+    padding: 0; /* Reset padding to remove any default spacing */
+  }
+  
+  .marquee-gif {
+    animation: marquee 7s linear infinite; /* Adjust animation duration and timing function as needed */
+    margin: 0; /* Reset margin to remove any default spacing */
+    padding: 0; /* Reset padding to remove any default spacing */
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(900%);
+    }
+    100% {
+      transform: translateX(-900%);
+    }
+  }
