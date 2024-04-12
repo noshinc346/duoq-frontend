@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { verifyUser } from './services/user.js'
 import Nav from './components/Nav/Nav.jsx'
-import Footer from './components/Footer/Footer.jsx'
 import Game from './components/Game/Game.jsx'
 import Register from './screens/Register/Register.jsx'
 import SignOut from './screens/SignOut/SignOut.jsx'
@@ -13,6 +12,7 @@ import Profile from './screens/Profile/Profile.jsx'
 import ProfileEdit from './screens/ProfileEdit/ProfileEdit.jsx'
 import LandingPage from './screens/LandingPage/LandingPage.jsx'
 import Homepage from './screens/Homepage/Homepage.jsx'
+import About from './screens/About/About.jsx'
 import './App.css'
 
 
@@ -34,7 +34,7 @@ function App() {
       <Nav user={user}/>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/home" element={<Homepage />} />
+        <Route path="/home" element={<Homepage setUser={setUser} />} />
         <Route path="/register" element={<Register setUser={setUser} />}/>
         <Route path="/login" element={<Login setUser={setUser}/>} />
         <Route path="/sign-out" element={<SignOut />} />
@@ -43,6 +43,7 @@ function App() {
         <Route path="/profile/edit" element={<ProfileEdit />} />
         <Route path="/matched-page" element={<MatchedPage />} />
         <Route path="/matching-page" element={<MatchingPage />} />
+        <Route path="/about" element={<About user={user}/>}/>
       </Routes>
     </div>
   );
