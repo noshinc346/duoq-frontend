@@ -52,6 +52,7 @@
     color: white;
     margin-top: 25px;
     margin-bottom: 25px;
+    position: absolute;
 }
 
 /* .icon-controller {
@@ -70,11 +71,14 @@
     flex-direction: column;
     align-items: center;
     width: -moz-fit-content;
-    width: 30%;
     margin: 0 auto 0;
-    padding: 80px 40px 20px;
+    padding: 10%;
     border-radius: 8%;
-    background-color: #27476eb0;
+    /* background-color: #27476eb0; */
+    background-image: url("../../assets/nintendo\ \(1\).png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .icon-controller {
@@ -127,15 +131,18 @@
     transform: rotate(-10deg); /* Adjust the angle as needed */
 }
 
-.nintendo-container {
+/* .nintendo-container {
     display: flex;
     justify-content: center;
-    
-}
+} */
 
-.nintendo-switch {
+/* .nintendo-switch {
     width: 75vw;
     height: auto;
     margin: auto 0;
     position: absolute;
+    display: block;
+} */
+
+.switch-container {
 }
