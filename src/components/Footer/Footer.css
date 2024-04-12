@@ -1,0 +1,15 @@
+.footer{
+    text-align: center;
+    padding-top: .5em;
+    padding-bottom: 1em;
+}
+
+.about-link{
+    color: #FFF1EB;
+    text-decoration: none;
+    font-family: 'DO Futuristic', sans-serif;
+}
+
+.about-link:hover{
+    color: #D8315B;
+}
