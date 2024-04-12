@@ -38,3 +38,12 @@ export const verifyUser = async () => {
   }
   return false;
 };
+
+export const getUserId = async () => {
+	try {
+		const resp = await api.get("users/token/refresh/");
+		return resp.data.user.id
+	} catch (error) {
+		throw error;
+	}
+};
