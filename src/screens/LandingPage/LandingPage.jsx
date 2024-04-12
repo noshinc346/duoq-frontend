@@ -4,6 +4,7 @@ import BG3 from '../../assets/bg3.jpg'
 import Minecraft from '../../assets/minecraft.jpg'
 import DuoControllers from '../../assets/duocontrollers.mp4'
 import Footer from '../../components/Footer/Footer.jsx'
+
 import './LandingPage.css'
 
 function LandingPage() {

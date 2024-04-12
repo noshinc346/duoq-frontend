@@ -35,14 +35,14 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<Homepage setUser={setUser} />} />
-        <Route path="/register" element={<Register />}/>
-        <Route path="/login" element={<Login />} />
-        <Route path="/sign-out" element={<SignOut setUser={setUser}/>} />
-        <Route path="/profile" element={<Profile setUser={setUser}/>} />
-        <Route path="/profile/edit" element={<ProfileEdit setUser={setUser}/>} />
-        <Route path="/profile/:id" element={<Profile setUser={setUser}/>} />
-        <Route path="/matched-page" element={<MatchedPage setUser={setUser}/>} />
-        <Route path="/matching-page" element={<MatchingPage setUser={setUser}/>} />
+        <Route path="/register" element={<Register setUser={setUser} />}/>
+        <Route path="/login" element={<Login setUser={setUser}/>} />
+        <Route path="/sign-out" element={<SignOut />} />
+        <Route path="/profile/:id" element={<Profile />} />
+        {/* <Route path="/profile" element={<Profile />} /> */}
+        <Route path="/profile/edit" element={<ProfileEdit />} />
+        <Route path="/matched-page" element={<MatchedPage />} />
+        <Route path="/matching-page" element={<MatchingPage />} />
         <Route path="/about" element={<About user={user}/>}/>
       </Routes>
     </div>
