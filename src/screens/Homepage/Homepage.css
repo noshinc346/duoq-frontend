@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #001D4A;
+}
+
+
+.home-page{
+    width: 100vw;
+    height: 100vh;
+}
+
+.hp-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.intro{
+    font-family: 'DO Futuristic', sans-serif;
+    font-size: 50px;
+    color: #FFF1EB;
+    text-align: center;
+    margin-top: 2em;
+    position: absolute;
+    height: 40vh;
+    width: 100vw;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.intro-statement-container{
+    padding: 1em 4em;
+    background-color: rgb(39, 71, 110, .5);
+}
+
+.intro-statement{
+    font-family: "Orbitron", sans-serif;
+    color: #FFF1EB;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 1em 4em;
+}
+
+.games-header{
+    font-family: 'DO Futuristic', sans-serif;
+    font-size: 45px;
+    color: #FFF1EB;
+    padding: 1em 0;
+    text-align: center;
+    margin-top: 8em;
+}
+
+.img-gallery{
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 2em;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 1em 0;
+}
+
+.gallery-imgs{
+    height: 600px;
+    width: 375px;
+    margin-right: 10px;
+ }
+ 
