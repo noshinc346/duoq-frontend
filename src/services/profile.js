@@ -62,3 +62,12 @@ export const updateGameForProfile = async (profileId, gameId) => {
         throw error;
     }
 }
+
+export const getProfiles = async () => {
+    try {
+        const response = await api.get("/user/profiles/");
+        return response.data;
+    } catch (error) {
+        throw error;
+    }
+}
