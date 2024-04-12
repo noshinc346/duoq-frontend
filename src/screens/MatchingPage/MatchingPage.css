@@ -1,0 +1,11 @@
+.profile-match-container{
+    font-family: "Orbitron", sans-serif;
+    color: #FFF1EB;
+    background-color: rgb(39, 71, 110);
+    margin: 5em 15em;
+    padding: 2em 4em;
+}
+
+.profile-name-header{
+    margin-bottom: 1em;
+}

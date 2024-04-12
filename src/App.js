@@ -14,19 +14,29 @@ import LandingPage from './screens/LandingPage/LandingPage.jsx'
 import Homepage from './screens/Homepage/Homepage.jsx'
 import About from './screens/About/About.jsx'
 import './App.css'
+import { getProfile } from './services/profile.js'
 
 
 function App() {
   const [user, setUser] = useState(null);
+  const [profile, setProfile] = useState(null)
 
-  // useEffect(() => {
-  //   const fetchUser = async () => {
-  //     const user = await verifyUser();
-  //     user ? setUser(user) : setUser(null);
-  //   };
+  useEffect(() => {
+    const fetchUser = async () => {
+      const userData = await verifyUser();
+      
+      if (userData) {
+        const profileData = await getProfile()
+        setUser(userData)
+        setProfile(profileData)
+      } else { 
+        setUser(null)
+        setProfile(null)
+      }
+    };
 
-  //   fetchUser();
-  // }, []);
+    fetchUser();
+  }, []);
 
 
   return (
@@ -37,12 +47,12 @@ function App() {
         <Route path="/home" element={<Homepage setUser={setUser} />} />
         <Route path="/register" element={<Register setUser={setUser} />}/>
         <Route path="/login" element={<Login setUser={setUser}/>} />
-        <Route path="/sign-out" element={<SignOut />} />
+        <Route path="/sign-out" element={<SignOut setUser={setUser}/>} />
         <Route path="/profile/:id" element={<Profile />} />
         {/* <Route path="/profile" element={<Profile />} /> */}
         <Route path="/profile/edit" element={<ProfileEdit />} />
         <Route path="/matched-page" element={<MatchedPage />} />
-        <Route path="/matching-page" element={<MatchingPage />} />
+        <Route path="/matching-page" element={<MatchingPage profile={profile} />} />
         <Route path="/about" element={<About user={user}/>}/>
       </Routes>
     </div>

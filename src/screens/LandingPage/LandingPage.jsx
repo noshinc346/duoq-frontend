@@ -27,7 +27,7 @@ function LandingPage() {
           Join now and elevate your gaming experience to new heights!
          </p>
     </div>
-     <h3 className="games-header">Games</h3>
+    <h3 className="games-header-one">Games</h3>
      <div className="img-gallery">
       {images.map((image, index) => (
         <img className="gallery-imgs" key={index} src={image} alt={`Image ${index + 1}`} />
