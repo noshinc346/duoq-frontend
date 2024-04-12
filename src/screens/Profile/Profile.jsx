@@ -98,5 +98,6 @@ function Profile() {
   )
 }
 // this is a comment
+// this is also a comment
 
 export default Profile
