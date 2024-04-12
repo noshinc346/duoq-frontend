@@ -29,7 +29,7 @@ export const addMatch = async (matchData) => {
 
 export const editMatch = async (id, matchData) => {
 	try {
-  		const resp = await api.put(`/user/matches/${id}/`, matchData);
+  		const resp = await api.patch(`/user/matches/${id}/`, matchData);
   		return resp.data;
   	} catch (error) {
     		throw error;
