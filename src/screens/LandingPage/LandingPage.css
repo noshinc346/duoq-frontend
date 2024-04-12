@@ -24,7 +24,12 @@ video{
     grid-template-columns: 1fr;
 }
 
-.lp-container-one{
+.intro{
+    font-family: 'DO Futuristic', sans-serif;
+    font-size: 50px;
+    color: #FFF1EB;
+    text-align: center;
+    margin-top: 2em;
     position: absolute;
     height: 40vh;
     width: 100vw;
@@ -32,31 +37,21 @@ video{
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
-    font-family: "video", serif;
 }
 
-.intro{
-    font-family: 'DO Futuristic', sans-serif;
-    font-size: 45px;
-    color: #FFF1EB;
-    text-align: center;
-    margin-top: 2em;
-}
-
-.lp-container-two{
-    background-color: rgb(39, 71, 110);
-    padding: 4em 0;
+.intro-statement-container{
+    padding: 1em 4em;
+    background-color: rgb(39, 71, 110, .5);
 }
 
 .intro-statement{
     font-family: "Orbitron", sans-serif;
     color: #FFF1EB;
-    font-size: 24px;
+    font-size: 22px;
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 1em 1em;
-    margin: 1em 1em;
+    margin: 1em 4em;
 }
 
 .games-header{
@@ -67,7 +62,8 @@ video{
     text-align: center;
 }
 
-.lp-container-three{
+.img-gallery{
+    display: inline-block;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -76,10 +72,6 @@ video{
     overflow: auto;
     white-space: nowrap;
     padding: 1em 0;
-}
-
-.img-gallery{
-    display: inline-block;
 }
 
 .gallery-imgs{
