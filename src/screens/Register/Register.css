@@ -14,7 +14,7 @@
 
 .register-form .input-title {
     font-size: 15px; /* Adjust the font size as needed */
-    color: rgb(170, 170, 170);
+    color: rgb(255, 255, 255);
 }
 
 .register-form input {
@@ -48,10 +48,11 @@
     border-radius: 4px;
     background-color: #08a6ff;
     border: none;
-    width: 350px;
+    width: 150px;
     color: white;
     margin-top: 25px;
     margin-bottom: 25px;
+    /* position: absolute; */
 }
 
 /* .icon-controller {
@@ -70,11 +71,13 @@
     flex-direction: column;
     align-items: center;
     width: -moz-fit-content;
-    width: 30%;
     margin: 0 auto 0;
-    padding: 80px 40px 20px;
+    padding: 10%;
     border-radius: 8%;
-    background-color: #27476eb0;
+    background-image: url("../../assets/NINTENDOSWITCH.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .icon-controller {
@@ -100,14 +103,14 @@
 }
 
 .terms {
-    width: 350px;
+    width: 50%px;
     font-size: smaller;
     color: rgb(234, 212, 212);
 }
 
 .privacy {
     margin-top: 5px;
-    width: 350px;
+    width: 50%px;
     font-size: small;
     color: rgb(234, 212, 212);
 
@@ -127,15 +130,70 @@
     transform: rotate(-10deg); /* Adjust the angle as needed */
 }
 
-.nintendo-container {
+/* .nintendo-container {
     display: flex;
     justify-content: center;
-    
-}
+} */
 
-.nintendo-switch {
+/* .nintendo-switch {
     width: 75vw;
     height: auto;
     margin: auto 0;
     position: absolute;
+    display: block;
+} */
+
+@keyframes blink {
+    from{
+        opacity: 0%;
+     }
+     to{
+         opacity: 100%;
+      }
+  }
+
+
+.type-writer {
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bold;
 }
+
+.type-writer::after{
+    content: "|";
+    animation: blink 1s infinite;
+ }
+
+ .faketerms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(39, 71, 110);
+    padding: 15px;
+ }
+
+ .Steven-Is-Numer-1 {
+        display: flex;
+        /* width: 90%; */
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+ }
+
+ .something {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+ }
+
+ p.register-error {
+    font-weight: bold;
+    font-style: italic;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 10px;
+ }
