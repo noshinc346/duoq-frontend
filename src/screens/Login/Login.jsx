@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signIn } from "../../services/user.js";
+import './Login.css'
+
 
 function Login({setUser}) {
 
@@ -40,17 +42,9 @@ function Login({setUser}) {
   };
 
   const renderError = () => {
-    const toggleForm = form.isError ? "danger" : "";
-
     if (form.isError) {
-      return (
-        <button type="submit" className={toggleForm}>
-          {form.errorMsg}
-        </button>
-      );
-    } else {
-      return <button type="submit">Log In</button>;
-    }
+      return <p className="login-error"> {form.errorMsg}</p>;
+    } 
   };
 
 
@@ -59,32 +53,41 @@ function Login({setUser}) {
   return (
     <div className="loginpage-body">
       <div className="login-container">
-        <form className="login-form" onSubmit={handleSubmit}>
+        <form className="login-form">
           <h3 className="login-title">Welcome back to DuoQ!</h3>
+          {renderError()}
+          <div className="username-box input-box">
+         <p className="input-title">Username</p>
           <input
             type='text'
             name='username'
             value={username}
-            placeholder='Enter Username'
+            placeholder='Username'
             onChange={handleChange}
             required
             autoComplete="off"
           />
+          </div>
+          <div className="username-box input-box">
+          <p className="input-title">Password</p>
           <input
             type='password'
             name='password'
             value={password}
-            placeholder='Enter Password'
+            placeholder='Password'
             onChange={handleChange}
             required
             autoComplete="off"
           />
-          {renderError()}
-        </form>
+          </div>
+          <div className="Steven-Is-Numer-2">
+          <button className="login-buttonpage" type="submit" onClick={handleSubmit}>Login</button>
       </div>
       <p className="loginpage-register-link">
-        Dont have an account? <Link to={"/register"}>Register </Link>
+        Dont have an account? <Link className="register-link" to={"/register"}>Register </Link>
       </p>
+        </form>
+      </div>
     </div>
   )
 }

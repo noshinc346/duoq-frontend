@@ -36,7 +36,6 @@ function LandingPage() {
      <Footer />
     </div>
   </div>
-  </div>
   )
 }
 
