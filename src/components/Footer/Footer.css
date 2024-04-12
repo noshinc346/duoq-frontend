@@ -9,3 +9,7 @@
     text-decoration: none;
     font-family: 'DO Futuristic', sans-serif;
 }
+
+.about-link:hover{
+    color: #D8315B;
+}

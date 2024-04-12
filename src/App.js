@@ -35,8 +35,8 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<Homepage setUser={setUser} />} />
-        <Route path="/register" element={<Register setUser={setUser} />}/>
-        <Route path="/login" element={<Login setUser={setUser}/>} />
+        <Route path="/register" element={<Register />}/>
+        <Route path="/login" element={<Login />} />
         <Route path="/sign-out" element={<SignOut setUser={setUser}/>} />
         <Route path="/profile" element={<Profile setUser={setUser}/>} />
         <Route path="/profile/edit" element={<ProfileEdit setUser={setUser}/>} />
