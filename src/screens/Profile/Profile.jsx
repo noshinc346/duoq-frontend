@@ -3,7 +3,6 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import { getProfile, updateProfile, addGameForProfile, removeGameFromProfile, updateGameForProfile, deleteProfile, getProfileById } from '../../services/profile';
 import { getUserGame, addUserGame } from '../../services/usergame.js'
 import './Profile.css'
-import { getGameById } from '../../services/games.js'; 
 import ProfileGame from '../../components/ProfileGame/ProfileGame.jsx';
 
 function Profile() {
@@ -34,7 +33,7 @@ function Profile() {
   }, []);
 
   // const handleDelete = async () => {
-  //   await deleteProfile();
+    // await deleteProfile();
   //   navigate('/')
   // }
 

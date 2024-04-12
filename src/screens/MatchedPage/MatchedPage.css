@@ -1,0 +1,25 @@
+.matched-page-container {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1em;
+    border-radius: 30px;
+    
+}
+
+.matched-page-info {
+    /* text-align: center; */
+    background-color: blue;
+    width: 200px;
+    padding: 1em;
+    border-radius: 1em;
+    margin: 0 auto;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.matched-button {
+
+}
