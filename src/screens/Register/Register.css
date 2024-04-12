@@ -1,0 +1,118 @@
+
+
+/* .register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: -moz-fit-content;
+    width: 30%;
+    margin: 70px auto 0;
+    padding: 40px;
+    border-radius: 8%;
+    background-color: #27476eb0;
+} */
+
+.register-form .input-title {
+    font-size: 15px; /* Adjust the font size as needed */
+    color: rgb(170, 170, 170);
+}
+
+.register-form input {
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 350px;
+    box-sizing: border-box;
+    background-color: #3c6495;
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.register-title {
+    color: white;
+    margin: 10px;
+    font-size: 30px;
+}
+
+.input-title {
+    color: white;
+}
+
+.input-box {
+    margin: 10px;
+}
+.register-button {
+    font-size: 16px;
+    height: 42px;
+    border-radius: 4px;
+    background-color: #08a6ff;
+    border: none;
+    width: 350px;
+    color: white;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* .icon-controller {
+    width: 60px;
+} */
+
+.create-account-title {
+    color: white;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.register-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: -moz-fit-content;
+    width: 30%;
+    margin: 70px auto 0;
+    padding: 80px 40px 20px;
+    border-radius: 8%;
+    background-color: #27476eb0;
+}
+
+.icon-controller {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    width: 60px;
+    z-index: 1;
+}
+
+
+::placeholder{
+    color: white;
+}
+
+.register-error {
+    color: #b13730;
+    text-align: center;
+}
+
+.register-button:hover {
+    background-color: #D8315B; /* Background color on hover */
+}
+
+.terms {
+    width: 350px;
+    font-size: smaller;
+    color: rgb(234, 212, 212);
+}
+
+.privacy {
+    margin-top: 5px;
+    width: 350px;
+    font-size: small;
+    color: rgb(234, 212, 212);
+
+}
+
+.underline {
+    text-decoration: underline;
+}
