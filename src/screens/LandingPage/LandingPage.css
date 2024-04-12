@@ -40,7 +40,6 @@ video{
 }
 
 .intro-statement-container{
-    padding: 1em 4em;
     background-color: rgb(39, 71, 110, .5);
 }
 
@@ -54,12 +53,12 @@ video{
     margin: 1em 4em;
 }
 
-.games-header{
+.games-header-one{
     font-family: 'DO Futuristic', sans-serif;
     font-size: 45px;
     color: #FFF1EB;
-    padding: 1em 0;
     text-align: center;
+    margin-top: 2em;
 }
 
 .img-gallery{
