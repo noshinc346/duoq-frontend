@@ -14,5 +14,61 @@ img {
     color: white;
 }
 
+.profile-banner-container {
+    position: relative; /* Ensure the banner container is relatively positioned */
+    width: 100%;
+    height: 250px; /* Set a specific height for the banner container */
+    overflow: hidden;
+    z-index: 1; /* Ensure the profile picture appears above the banner */
+
+  }
+  
+  .profile-banner {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure the image covers the entire container */
+  }
+  
+  .profile-picture-container {
+    position: absolute; /* Position the profile picture container absolutely */
+    left: 50%; /* Position it horizontally at the center of the banner */
+    transform: translate(-50%, -50%); /* Center it perfectly */
+    border-radius: 50%; /* Make the container circular */
+    overflow: hidden;
+    width: 150px; /* Adjust the width and height as needed */
+    height: 150px;
+    z-index: 2; /* Ensure the profile picture appears above the banner */
+  }
+  
+  .profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+  }
+
+  .profile-content {
+    display: flex;
+    margin-top: 10%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+
+.usergames {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.games-box {
+    width: 75%;
+    background-color: #28476e;
+    margin-left: 50px;
+}
 
 
+.user-info-box {
+    background-color: #28476e;
+}
