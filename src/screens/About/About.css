@@ -1,0 +1,19 @@
+.about-page-header{
+    font-family: 'DO Futuristic', sans-serif;
+    font-weight: bold;
+    color: #FFF1EB;
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+}
+
+.team-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 3em;
+    align-content: center;
+    align-items: center;
+    font-family: 'DO Futuristic', sans-serif;
+    font-weight: bold;
+    color: #FFF1EB;
+}

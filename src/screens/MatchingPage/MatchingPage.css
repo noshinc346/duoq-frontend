@@ -1,11 +1,71 @@
+.matching-page-header{
+    font-family: 'DO Futuristic', sans-serif;
+    color: #FFF1EB;
+    text-align: center;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+}
+
+.matched-message-container{
+    margin-bottom: 3em;
+}
+
+.matched-message{
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    color: #FFF1EB;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 .profile-match-container{
     font-family: "Orbitron", sans-serif;
     color: #FFF1EB;
     background-color: rgb(39, 71, 110);
-    margin: 5em 15em;
-    padding: 2em 4em;
+    border: solid 1px #FFF1EB;
+    height: 550px;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 2.5em;
+}
+
+.profile-pic{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 .profile-name-header{
-    margin-bottom: 1em;
+    font-family: "Orbitron", sans-serif;
+    font-size: 30px;
+    margin-top: 2em;
+    text-align: center;
 }
+
+.games-matching-container{
+    text-align: center;
+    margin-top: 2em;
+}
+
+.bio-container{
+    text-align: center;
+    margin-top: 2em;
+    padding: 1em 3em;
+}
+
+.matching-page-btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.match-btn{
+    font-size: 15px;
+    margin-bottom: 4em;
+}
+
+.skip-btn{
+    font-size: 15px;
+    margin-bottom: 4em;
+}
+

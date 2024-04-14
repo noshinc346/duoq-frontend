@@ -13,7 +13,7 @@ function MatchedPage() {
 
       // filter out matches that are deleted
       const filteredMatches = matchedData.filter(match => {
-        return !match.deleted
+        return !match.deleted && match.recipricated
       })
 
       setMyMatches(filteredMatches);
