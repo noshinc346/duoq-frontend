@@ -5,98 +5,55 @@ import { getUserGame, addUserGame } from '../../services/usergame.js'
 import './Profile.css'
 import ProfileGame from '../../components/ProfileGame/ProfileGame.jsx';
 
-function Profile() {
-  const [myProfile, setMyProfile] = useState(null)
-  const [userProfile, setUserProfile] = useState(null);
-  const [profileGames, setProfileGames] = useState([]);
-  const [toggle, setToggle] = useState(false);
 
-  let { id } = useParams();
-  let navigate = useNavigate();
+function Profile() {
+  const [profile, setProfile] = useState(null);
+  const [profileGames, setProfileGames] = useState([]);
 
   useEffect(() => {
-    const fetchProfiles = async () => {
-      const myProfileData = await getProfile();
-      const profileData = await getProfileById(id);
+    const fetchData = async () => {
+      try {
+        // Fetch the logged-in user's profile
+        const profileData = await getProfile();
+        setProfile(profileData);
 
-      setMyProfile(myProfileData)
-      setUserProfile(profileData)
+        // Fetch the logged-in user's games
+        const userGamesData = await getUserGame(profileData.id);
+        setProfileGames(userGamesData);
+      } catch (error) {
+        console.error('Error fetching profile data:', error);
+      }
     };
 
-    const fetchUserGames = async () => {
-      const userGamesTest = await getUserGame(id);
-      setProfileGames(userGamesTest);
-    };
-
-    fetchUserGames()
-    fetchProfiles();
+    fetchData();
   }, []);
-
-  // const handleDelete = async () => {
-    // await deleteProfile();
-  //   navigate('/')
-  // }
-
-  // const handleAddGame = async (gameId) => {
-  //   await addGameForProfile(id, gameId)
-  //   setToggle(prev => !prev)
-  // }
-
-  // const handleRemoveGame = async (gameId) => {
-  //   await removeGameFromProfile(id, gameId)
-  //   setToggle(prev => !prev)
-  // }
-
-  // const handleStatusChange = (e) => {
-  //   const { name, value } = e.target
-
-  //   setUserGame((prevUserGame) => ({
-  //     ...prevUserGame,
-  //     [name]: value
-  //   }))
-  // }
-
-  // const handleUserGameSubmit = async (e) => {
-  //   e.preventDefault()
-    
-  //   const statusMap = {
-  //     Playing: 'PG',
-  //     Played: 'PG',
-  //     Interested: 'I',
-  //     None: 'NA'
-  //   };
-    
-  //   const { status, ign, rank } = userGame
-    
-  //   const finalStatus = {
-  //     status: statusMap[status],
-  //     ign,
-  //     rank
-  //   }
-
-  //   const createdUserGame = await addUserGame(id, finalStatus)
-
-  //   if (createdUserGame) {
-  //     setToggle(prev => !prev)
-  //   }
-  // }
 
   return (
     <div>
-      <img src={`${userProfile?.profile_picture}`} />
-      <h1>{`${userProfile?.name}`}</h1>
-      <p>{`${userProfile?.bio}`}</p>
-      <p>{`${userProfile?.dob}`}</p>
 
-      <div>
-        {profileGames.map((game, idx) =>(
-          <ProfileGame key={idx} game={game} />
-       ))}
-      </div>
+      <Link to="/profile/edit">
+        <button>Edit Profile</button>
+      </Link>
+
+
+      {profile && (
+        <>
+          <img className='profile-banner' src={`${profile?.banner}`} />
+          <h1 className='profile-name'>{profile.name}</h1>
+          <img className='profile-picture' src={`${profile?.profile_picture}`} />
+          <p className='profile-bio'>{`${profile?.bio}`}</p>
+          <p className='profile-dob'>{`${profile?.dob}`}</p>
+        </>
+      )}
+
+
+      {profileGames.map((game, idx) => (
+        <ProfileGame key={idx} game={game} />
+      ))}
+
+      
     </div>
-  )
+  );
 }
-// this is a comment
-// this is also a comment
 
-export default Profile
+export default Profile;
