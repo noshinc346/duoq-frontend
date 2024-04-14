@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signIn } from "../../services/user.js";
 import './Login.css'
+import { getProfile } from "../../services/profile.js";
 
 
-function Login({setUser}) {
+function Login({setUser, setProfile}) {
 
   const navigate = useNavigate();
 
@@ -27,7 +28,9 @@ function Login({setUser}) {
 
     try {
       const userData = await signIn(form);
+      const profileData = await getProfile()
       setUser(userData);
+      setProfile(profileData);
 
       navigate("/home");
     } catch (error) {

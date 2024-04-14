@@ -6,7 +6,7 @@ import pinkcontroller from "../../assets/pinkcontroller2.png"
 import Marquee from "../../components/Marquee/Marquee.jsx";
 
 
-function Register({ setUser }) {
+function Register({ setUser, setProfile }) {
 
   const TypeWriter = ({ content = "", speed = 100 }) => {
     const [displayedContent, setDisplayedContent] = useState("");

@@ -1,6 +1,6 @@
 video{
     width: 100vw;
-    height: 38vh;
+    height: 33vh;
     object-fit: cover;
  }
 
@@ -11,7 +11,7 @@ video{
     text-align: center;
     margin-top: 2em;
     position: absolute;
-    height: 30vh;
+    height: 25vh;
     width: 100vw;
     top: 0;
     display: grid;
@@ -28,7 +28,7 @@ video{
     color: #FFF1EB;
     margin-left: 2em;
     margin-right: 2em;
-    height: 400px;
+    height: 450px;
 }
 h3{
     font-family: 'DO Futuristic', sans-serif;
@@ -56,4 +56,24 @@ h3{
 .niles-container{
     background-color: rgb(39, 71, 110);
     border-radius: 10px;
+}
+
+.team-img{
+    border-radius: 100px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.team-role{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.team-role-two{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.fav-mg{
+    margin-bottom: 1em;
 }

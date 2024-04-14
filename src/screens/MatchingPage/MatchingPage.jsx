@@ -3,16 +3,18 @@ import { addMatch, editMatch } from "../../services/matched.js";
 import { useState, useEffect } from "react";
 import "./MatchingPage.css";
 
-function MatchingPage({ profile, games }) {
+function MatchingPage({ profile, setProfile }) {
   const [profiles, setProfiles] = useState([]);
   const [index, setIndex] = useState(0);
   const [matchInitialized, setMatchInitialized] = useState(false);
   const [matchesCache, setMatchesCache] = useState({});
+  const [toggle, setToggle] = useState(false)
 
   const fetchProfiles = async () => {
     try {
       const profileGameData = await getProfiles();
-      setProfiles(profileGameData);
+      let filteredProfileGameData = profileGameData.filter(gameData => !profile.matches.includes(gameData.id));
+      setProfiles(filteredProfileGameData);
     } catch (error) {
       console.log(error);
     }
@@ -20,34 +22,42 @@ function MatchingPage({ profile, games }) {
 
   useEffect(() => {
     fetchProfiles();
-  }, []);
+  }, [toggle]);
 
   const handleMatch = async () => {
     const targetProfile = profiles[index];
 
     // check if match already exists, if not, post; otherwise, patch
-    const isExisintMatch = profile.matches.includes(targetProfile.id);
+    const isExistingMatch = profile.matches.includes(targetProfile.id) || targetProfile.matches.includes(profile.id)
 
-    if (isExisintMatch) {
+    if (isExistingMatch) {
+      console.log("In here")
       // Match exists - update recipricated to true
       await editMatch(targetProfile.id, { recipricated: true });
-
+      
       console.log("Match intitialized!");
       setMatchInitialized(true);
       setTimeout(() => setMatchInitialized(false), 5000);
     } else {
+      console.log("In herrrrr")
       // Match does not exist - create initial match
       console.log("Create initial match");
       await addMatch({
         user1_profile: profile.id,
         user2_profile: targetProfile.id,
       });
+
+      setProfile(prevProfile => ({
+        ...prevProfile,
+        matches: [...prevProfile.matches, targetProfile.id]
+      }))
     }
 
     moveToNextProfile();
   };
 
   const moveToNextProfile = () => {
+    setToggle(prev => !prev)
     const nextIndex = index + 1 < profiles.length ? index + 1 : 0;
     setIndex(nextIndex);
   };
@@ -71,7 +81,7 @@ function MatchingPage({ profile, games }) {
             <h2 className="profile-name-header">{profiles[index].name}</h2>
             <div className="games-matching-container">
               <h3 className="games-headline">Games</h3>
-              {profiles[index].user_games.map((userGame) => (
+              {profiles[index]?.user_games?.map((userGame) => (
                 <p key={userGame.id}>{userGame.game.name}</p>
               ))}
             </div>

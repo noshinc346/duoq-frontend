@@ -44,15 +44,15 @@ function App() {
       <Nav user={user}/>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/home" element={<Homepage setUser={setUser} />} />
+        <Route path="/home" element={<Homepage />} />
         <Route path="/register" element={<Register setUser={setUser} />}/>
-        <Route path="/login" element={<Login setUser={setUser}/>} />
-        <Route path="/sign-out" element={<SignOut setUser={setUser}/>} />
+        <Route path="/login" element={<Login setUser={setUser} setProfile={setProfile}/>} />
+        <Route path="/sign-out" element={<SignOut setUser={setUser} setProfile={setProfile}/>} />
         <Route path="/profile/:id?" element={<Profile />} />
         {/* <Route path="/profile" element={<Profile />} /> */}
         <Route path="/profile/edit" element={<ProfileEdit />} />
-        <Route path="/matched-page" element={<MatchedPage />} />
-        <Route path="/matching-page" element={<MatchingPage profile={profile} />} />
+        <Route path="/matched-page" element={<MatchedPage profile={profile}/>} />
+        {profile && <Route path="/matching-page" element={<MatchingPage profile={profile} setProfile={setProfile}/>} />}
         <Route path="/about" element={<About user={user}/>}/>
       </Routes>
     </div>
