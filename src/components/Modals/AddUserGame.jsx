@@ -67,6 +67,7 @@ function AddUserGame(props) {
     		e.preventDefault();
 		console.log(usergame)
     		await addUserGame(usergame);
+		toggleModal();
 		navigate("/home");
   	};
 
@@ -95,7 +96,6 @@ function AddUserGame(props) {
               						action=""
               						method="post"
             					>
-							<label for="games">Choose a Game:</label>
 							<select name="games" id="games" onChange={handleChange}>
 								{games.map((game, index) => {
 									return(
@@ -128,7 +128,7 @@ function AddUserGame(props) {
 								name="competitive" 
 								value={usergame.competitive}
 							/>
-							<label for="competitive"> Are you competitive at this game?</label>
+							<label for="competitive" className="add-instruct">Competitive?</label>
               						<button
                 						className="add-close-modal"
                 						onClick={handleSubmit}

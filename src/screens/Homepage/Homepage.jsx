@@ -3,22 +3,22 @@ import './Homepage.css'
 import { getGames } from '../../services/games.js';
 import { getUserId } from '../../services/user.js';
 import { getUserGame } from '../../services/usergame.js';
-import Carousel from 'react-hot-carousel'
+import AddUserGame from '../../components/Modals/AddUserGame.jsx';
 
 function Homepage() {
 
 	const [id, setId] = useState(null);
 	const [userGame, setUserGame] = useState([]);
 
-	useEffect(() => {
-		const fetchUserGames = async () => {
-			const userid = await getUserId();
-			setId(userid);
-			const usergames = await getUserGame(userid);
-			setUserGame(usergames);
-
-		}
+	const fetchUserGames = async () => {
+		const userid = await getUserId();
+		setId(userid);
+		const usergames = await getUserGame(userid);
+		setUserGame(usergames);
+	}
 		
+
+	useEffect(() => {
 		fetchUserGames();
 	},[]);
 
@@ -53,6 +53,7 @@ function Homepage() {
 				})
 				}
          		</div>
+	  		<AddUserGame id={id} />
         	</div>
       	</div>
     </div>
