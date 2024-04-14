@@ -42,7 +42,7 @@ function Homepage() {
           		</p>
         	</div>
 		<div className="hp-container-three">
-				<h1 class="games-header">
+				<h1 className="games-header">
 	  				Your Games
 	  			</h1>
         		<div className = "img-gallery">

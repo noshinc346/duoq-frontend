@@ -1,25 +1,29 @@
-.matched-page-container {
-    display: flex;
-    justify-content: center;
-    background-color: red;
+.matched-page-header{
+    font-family: 'DO Futuristic', sans-serif;
+    color: #FFF1EB;
     text-align: center;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+}
+
+
+.matched-container {
+    font-family: "Orbitron", sans-serif;
+    color: #FFF1EB;
+    background-color: rgb(39, 71, 110);
+    border: solid 1px #FFF1EB;
+    width: 600px;
     margin: 0 auto;
-    margin-top: 1em;
-    border-radius: 30px;
-    
+    border-radius: 10px;
+    margin-bottom: 2.5em;
 }
 
 .matched-page-info {
     /* text-align: center; */
-    background-color: blue;
     width: 200px;
     padding: 1em;
     border-radius: 1em;
     margin: 0 auto;
     margin-top: .5em;
     margin-bottom: .5em;
-}
-
-.matched-button {
-
 }

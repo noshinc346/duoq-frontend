@@ -11,5 +11,5 @@
 }
 
 .about-link:hover{
-    color: #D8315B;
+    text-shadow: 0 0 5px #D8315B;
 }

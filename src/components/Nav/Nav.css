@@ -31,12 +31,51 @@ button{
     padding: .5em;
 }
 
-.authlink{
+.welcome{
     text-decoration: none;
     margin: .5em .5em;
-    font-size: 15px;
-    font-family: 'DO Futuristic', sans-serif;
+    font-size: 16px;
+    font-family: "Orbitron", sans-serif;
     color: #FFF1EB;
     padding: .5em;
     font-weight: bold;
 }
+
+.welcome:hover{
+    text-shadow: 0 0 5px #D8315B;
+}
+
+.authlink{
+    text-decoration: none;
+    margin: .5em .5em;
+    font-size: 16px;
+    font-family: "Orbitron", sans-serif;
+    color: #FFF1EB;
+    padding: .5em;
+    font-weight: bold;
+}
+
+.authlink:hover{
+    color: #D8315B;
+}
+  
+.arrow{
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+  
+.arrow.up{
+    transform: rotate(180deg);
+}
+  
+ .dropdown{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(39, 71, 110, .7);
+    margin-right: .8em;
+    margin-top: .5em;
+    padding-right: .2em;
+    padding-left: .3em;
+  }

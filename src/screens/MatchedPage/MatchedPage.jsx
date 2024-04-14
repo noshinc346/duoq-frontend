@@ -13,7 +13,7 @@ function MatchedPage() {
 
       // filter out matches that are deleted
       const filteredMatches = matchedData.filter(match => {
-        return !match.deleted
+        return !match.deleted && match.recipricated
       })
 
       setMyMatches(filteredMatches);
@@ -23,11 +23,14 @@ function MatchedPage() {
   }, [toggle]);
 
   return (
-    <div className='matched-page-container'>
+    <div className="matched-page">
+      <h1 className="matched-page-header">Your Matches</h1>
+      <div className="matched-container">
         <div className='matched-page-info'>
           {myMatches.map((match, idx) =>(
               <Matched key={idx} match={match} setToggle={setToggle}/>
           ))}
+        </div>
         </div>
     </div>
   )
