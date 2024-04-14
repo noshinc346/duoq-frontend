@@ -48,9 +48,9 @@ function App() {
         <Route path="/register" element={<Register setUser={setUser} />}/>
         <Route path="/login" element={<Login setUser={setUser} setProfile={setProfile}/>} />
         <Route path="/sign-out" element={<SignOut setUser={setUser} setProfile={setProfile}/>} />
-        <Route path="/profile/:id?" element={<Profile />} />
+        <Route path="/profile/:id?" element={<Profile setUser={setUser}/>} />
         {/* <Route path="/profile" element={<Profile />} /> */}
-        <Route path="/profile/edit" element={<ProfileEdit />} />
+        <Route path="/profile/edit" element={<ProfileEdit setUser={setUser}/>} />
         <Route path="/matched-page" element={<MatchedPage profile={profile}/>} />
         {profile && <Route path="/matching-page" element={<MatchingPage profile={profile} setProfile={setProfile}/>} />}
         <Route path="/about" element={<About user={user}/>}/>
