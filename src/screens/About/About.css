@@ -1,19 +1,59 @@
+video{
+    width: 100vw;
+    height: 38vh;
+    object-fit: cover;
+ }
+
 .about-page-header{
     font-family: 'DO Futuristic', sans-serif;
-    font-weight: bold;
+    font-size: 50px;
     color: #FFF1EB;
-    display: flex;
-    justify-content: center;
-    margin-top: 3em;
+    text-align: center;
+    margin-top: 2em;
+    position: absolute;
+    height: 30vh;
+    width: 100vw;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
 }
 
 .team-container{
+    text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 3em;
-    align-content: center;
-    align-items: center;
-    font-family: 'DO Futuristic', sans-serif;
-    font-weight: bold;
+    margin-top: 4em;
+    font-family: "Orbitron", sans-serif;
     color: #FFF1EB;
+    margin-left: 2em;
+    margin-right: 2em;
+    height: 400px;
+}
+h3{
+    font-family: 'DO Futuristic', sans-serif;
+    margin-bottom: 1.5em;
+}
+
+.luke-container{
+    background-color: rgb(39, 71, 110);
+    border-radius: 10px;
+    margin-right: .5em;
+}
+
+.jenn-container{
+    background-color: rgb(39, 71, 110);
+    border-radius: 10px;
+    margin-right: .5em;
+}
+
+.noshin-container{
+    background-color: rgb(39, 71, 110);
+    border-radius: 10px;
+    margin-right: .5em;
+}
+
+.niles-container{
+    background-color: rgb(39, 71, 110);
+    border-radius: 10px;
 }
