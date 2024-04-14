@@ -36,3 +36,11 @@ export const editMatch = async (id, matchData) => {
   	}
 };
 
+export const deleteMatchById = async (id) => {
+  try {
+    const resp = await api.delete(`/user/matches/${id}/`);
+    return resp.data; 
+  } catch (error) {
+    throw error;
+  }
+};

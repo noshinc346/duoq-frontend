@@ -23,7 +23,7 @@
     color: #FFF1EB;
     background-color: rgb(39, 71, 110);
     border: solid 1px #FFF1EB;
-    height: 550px;
+    height: 600px;
     width: 500px;
     margin: 0 auto;
     border-radius: 10px;
@@ -31,9 +31,10 @@
 }
 
 .profile-pic{
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
+    border-radius: 100px;
+    height: 150px;
+    width: 150px;
+    margin: 1.5em 11em;
 }
 
 .profile-name-header{
