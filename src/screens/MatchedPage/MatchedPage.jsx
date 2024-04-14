@@ -23,11 +23,14 @@ function MatchedPage() {
   }, [toggle]);
 
   return (
-    <div className='matched-page-container'>
+    <div className="matched-page">
+      <h1 className="matched-page-header">Your Matches</h1>
+      <div className="matched-container">
         <div className='matched-page-info'>
           {myMatches.map((match, idx) =>(
               <Matched key={idx} match={match} setToggle={setToggle}/>
           ))}
+        </div>
         </div>
     </div>
   )
