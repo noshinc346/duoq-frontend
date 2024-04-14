@@ -20,7 +20,10 @@ export const getProfileById = async (id) => {
 
 export const updateProfile = async (id, profileData) => {
     try {
+        console.log(id)
+console.log(profileData)
         const response = await api.put("/user/profile/", profileData);
+
         return response.data;
     } catch (error) {
         throw error;
