@@ -17,7 +17,8 @@ function Profile() {
   const [gameForm, setGameForm] = useState({
     status: "",
     ign: "", 
-    rank: ""
+    rank: "",
+    id: ""
   });
 
   useEffect(() => {

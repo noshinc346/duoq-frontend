@@ -5,7 +5,7 @@ import {getProfile} from "../../services/profile.js"
 
 import './ModalGame.css';
 
-function Modal({ isOpen, onClose, children, game, gameForm , setGameForm }) {
+function Modal({ isOpen, onClose, children, game, gameForm , setGameForm, onOpenModal }) {
   const navigate = useNavigate();
 
 
@@ -45,10 +45,8 @@ function Modal({ isOpen, onClose, children, game, gameForm , setGameForm }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-
-      await editUserGame(game.id); // Assuming profileData contains an 'id' field
-
-      navigate("/profile");
+      await editUserGame(gameForm.id, gameForm); // Assuming profileData contains an 'id' field
+      
     } catch (error) {
       console.error("Error updating profile:", error);
       // Handle error, show error message, etc.

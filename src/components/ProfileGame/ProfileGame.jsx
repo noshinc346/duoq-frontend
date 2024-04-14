@@ -9,7 +9,8 @@ function ProfileGame({ game, onOpenModal, setGameForm}) {
         setGameForm({
           'status': game.status,
           'ign': game.ign, 
-          'rank': game.rank
+          'rank': game.rank,
+          'id' : game.id
         })
         onOpenModal()
       }}>Edit</button>
