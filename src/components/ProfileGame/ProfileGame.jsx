@@ -1,4 +1,5 @@
 import React from 'react'
+import './ProfileGame.css'
 
 function ProfileGame({ game }) {
 
