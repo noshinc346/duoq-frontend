@@ -1,13 +1,13 @@
 import { getProfiles } from "../../services/profile.js";
 import { addMatch, editMatch } from "../../services/matched.js";
 import { useState, useEffect } from "react";
+import MatchBackground from '../../assets/matchbackground.jpeg'
 import "./MatchingPage.css";
 
 function MatchingPage({ profile, setProfile }) {
   const [profiles, setProfiles] = useState([]);
   const [index, setIndex] = useState(0);
   const [matchInitialized, setMatchInitialized] = useState(false);
-  const [matchesCache, setMatchesCache] = useState({});
   const [toggle, setToggle] = useState(false)
 
   const fetchProfiles = async () => {
@@ -37,7 +37,7 @@ function MatchingPage({ profile, setProfile }) {
       
       console.log("Match intitialized!");
       setMatchInitialized(true);
-      setTimeout(() => setMatchInitialized(false), 5000);
+      setTimeout(() => setMatchInitialized(false), 3000);
     } else {
       console.log("In herrrrr")
       // Match does not exist - create initial match
@@ -64,6 +64,7 @@ function MatchingPage({ profile, setProfile }) {
 
   return (
     <div className="matching-page">
+      <img className="background" src={MatchBackground} />
       <h1 className="matching-page-header">Meet Your DuQ Match</h1>
       {profiles.length > 0 ? (
         <>
@@ -73,6 +74,15 @@ function MatchingPage({ profile, setProfile }) {
               )}
         </div>
           <div className="profile-match-container">
+            <div className="banner-container">
+              <div className="banner-image">
+                <img 
+                className="banner-pic" 
+                src={profiles[index].banner}
+                alt={profiles[index].name}
+                />
+              </div>
+            </div>
             <img
               className="profile-pic"
               src={profiles[index].profile_picture}
@@ -82,7 +92,7 @@ function MatchingPage({ profile, setProfile }) {
             <div className="games-matching-container">
               <h3 className="games-headline">Games</h3>
               {profiles[index]?.user_games?.map((userGame) => (
-                <p key={userGame.id}>{userGame.game.name}</p>
+                <p className="game-names" key={userGame.id}>{userGame.game.name}</p>
               ))}
             </div>
             <div className="bio-container">

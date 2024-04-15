@@ -1,10 +1,11 @@
 import './About.css'
 import DuoControllers from '../../assets/duocontrollers.mp4'
 
+
 function About() {
   return (
     <div className="about-page">
-      <video className="lp-video" src={DuoControllers} autoPlay loop muted />
+      <video className="about-banner-video" src={DuoControllers} autoPlay loop muted />
       <h1 className="about-page-header">Meet the DuoQ Team</h1>
 
       <div className="team-container">
