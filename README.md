@@ -11,14 +11,12 @@ Welcome to DuoQ! Our platform is designed to bring gamers together by facilitati
 
 ## Wireframe 
 
-[Figma]([https://example.com/demo](https://www.figma.com/file/P8xKmfEPJTwGf2TJD0vA0A/DuoQ?type=design&node-id=0%3A1&mode=design&t=BP20tp7628XCSKD5-1))
+[Figma](https://www.figma.com/file/P8xKmfEPJTwGf2TJD0vA0A/DuoQ?type=design&node-id=0%3A1&mode=design&t=BP20tp7628XCSKD5-1))
 
 
 ![Progress Chart](https://i.imgur.com/YXIxF79.png)
 
 ![Progress Table](https://i.imgur.com/1f8ccSh.png)
-
-![ERD](https://i.imgur.com/cV2egLB.png)
 
 ![ERD](https://i.imgur.com/cV2egLB.png)
 
