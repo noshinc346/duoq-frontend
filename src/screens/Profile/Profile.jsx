@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import {
-  getProfile,
-  updateGameForProfile,
-} from "../../services/profile";
+import { getProfile, updateGameForProfile } from "../../services/profile";
 import { getUserGame, editUserGame } from "../../services/usergame.js";
 import "./Profile.css";
 import ProfileGame from "../../components/ProfileGame/ProfileGame.jsx";
-import Modal from "../../components/Modals/EditGameModal.jsx"; 
+import Modal from "../../components/Modals/EditGameModal.jsx";
 
 function Profile() {
   const [profile, setProfile] = useState(null);
@@ -16,9 +13,9 @@ function Profile() {
   const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
   const [gameForm, setGameForm] = useState({
     status: "",
-    ign: "", 
+    ign: "",
     rank: "",
-    id: ""
+    id: "",
   });
 
   useEffect(() => {
@@ -44,7 +41,6 @@ function Profile() {
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
-
 
   // console.log(profileGames);
 
@@ -84,9 +80,28 @@ function Profile() {
 
             <div className="games-box">
               <div className="tabs">
-                <button onClick={() => setActiveTab("played")}>Played</button>
-                <button onClick={() => setActiveTab("playing")}>Playing</button>
-                <button onClick={() => setActiveTab("interested")}>
+                <button
+                  className={`tab-button ${
+                    activeTab === "played" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("played")}
+                >
+                  Played
+                </button>
+                <button
+                  className={`tab-button ${
+                    activeTab === "playing" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("playing")}
+                >
+                  Playing
+                </button>
+                <button
+                  className={`tab-button ${
+                    activeTab === "interested" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("interested")}
+                >
                   Interested
                 </button>
               </div>
@@ -108,7 +123,6 @@ function Profile() {
                       game={game}
                       onOpenModal={toggleModal}
                       setGameForm={setGameForm}
-
                     />
                   ))}
                 {activeTab === "interested" &&
@@ -125,7 +139,12 @@ function Profile() {
           </div>
         </>
       )}
-      <Modal isOpen={isModalOpen} onClose={toggleModal} gameForm={gameForm} setGameForm={setGameForm}>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={toggleModal}
+        gameForm={gameForm}
+        setGameForm={setGameForm}
+      >
         {/* Content of the modal */}
       </Modal>
     </div>

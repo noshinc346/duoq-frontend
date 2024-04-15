@@ -46,7 +46,8 @@ function Modal({ isOpen, onClose, children, game, gameForm , setGameForm, onOpen
     e.preventDefault();
     try {
       await editUserGame(gameForm.id, gameForm); // Assuming profileData contains an 'id' field
-      
+      onClose()
+      window.location.reload()
     } catch (error) {
       console.error("Error updating profile:", error);
       // Handle error, show error message, etc.

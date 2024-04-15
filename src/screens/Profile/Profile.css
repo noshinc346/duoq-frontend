@@ -56,13 +56,14 @@ img {
   }
 
 .usergames {
-
+    margin-top: 35px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 .games-box {
+    height: 400px;
     width: 75%;
     background-color: #28476e;
     margin-left: 50px;
@@ -71,4 +72,20 @@ img {
 
 .user-info-box {
     background-color: #28476e;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.tab-button {
+  width: -webkit-fill-available;
+}
+
+.tab-button.active {
+  background-color: #007bff; /* Change to your desired active button color */
+  color: #fff; /* Change to your desired text color */
 }
