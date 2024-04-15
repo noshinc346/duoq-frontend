@@ -24,7 +24,7 @@ function About() {
           <img className="team-img" src="https://avatars.githubusercontent.com/u/156385243?v=4"/>
           <h3>Jenn Bourke</h3>
           <p className="team-role">Front End Engineer</p>
-          <p className="team-role-two"></p>
+          <p className="team-role-two">CSS Killer</p>
           <p className="fav-mg">Favorite Multiplayer Games:</p>
           <p className="fave-game-name">Baldur's Gate 3</p>
           <p className="fave-game-name">Super Smash Bros</p>
@@ -46,7 +46,7 @@ function About() {
           <p className="team-role">Back End Engineer</p>
           <p className="team-role-two"></p>
           <p className="fav-mg">Favorite Multiplayer Games: </p>
-          <p className="fave-game-name">Valorant</p>
+          <p className="fave-game-name">League of Legends</p>
           <p className="fave-game-name"></p>
         </div>
       </div>

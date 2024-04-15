@@ -28,11 +28,14 @@
     color: #FFF1EB;
     margin-left: 2em;
     margin-right: 2em;
+    margin-bottom: 4em;
     height: 450px;
 }
+
 h3{
     font-family: 'DO Futuristic', sans-serif;
     margin-bottom: 1.5em;
+    font-weight: bold;
 }
 
 .luke-container{
@@ -67,13 +70,16 @@ h3{
 .team-role{
     margin-top: 1em;
     margin-bottom: 1em;
+    font-weight: bold;
 }
 
 .team-role-two{
     margin-top: 1em;
     margin-bottom: 1em;
+    font-weight: bold;
 }
 
 .fav-mg{
     margin-bottom: 1em;
+    font-weight: bold;
 }
