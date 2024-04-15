@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import {
-  getProfile,
-  updateGameForProfile,
-} from "../../services/profile";
+import { getProfile, updateGameForProfile } from "../../services/profile";
 import { getUserGame, editUserGame } from "../../services/usergame.js";
 import "./Profile.css";
 import ProfileGame from "../../components/ProfileGame/ProfileGame.jsx";
-import Modal from "../../components/Modals/EditGameModal.jsx"; 
+import Modal from "../../components/Modals/EditGameModal.jsx";
 
 function Profile() {
   const [profile, setProfile] = useState(null);
@@ -16,9 +13,9 @@ function Profile() {
   const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
   const [gameForm, setGameForm] = useState({
     status: "",
-    ign: "", 
+    ign: "",
     rank: "",
-    id: ""
+    id: "",
   });
 
   useEffect(() => {
@@ -45,7 +42,6 @@ function Profile() {
     setIsModalOpen(!isModalOpen);
   };
 
-
   // console.log(profileGames);
 
   return (
@@ -69,24 +65,45 @@ function Profile() {
                 <h1 className="profile-name">{profile.name}</h1>
               </div>
 
-              <div className="profile-bio-container">
-                <p className="profile-bio">{profile.bio}</p>
+              <div className="bio-dob-container">
+                <div className="profile-bio-container">
+                  <p className="profile-bio">{profile.bio}</p>
+                </div>
+
+                <div className="profile-dob-container">
+                  <p className="profile-dob">{profile.dob}</p>
+                </div>
               </div>
 
-              <div className="profile-dob-container">
-                <p className="profile-dob">{profile.dob}</p>
-              </div>
-
-              <Link to="/profile/edit">
+              <Link className="edit-button-link" to="/profile/edit">
                 <button>Edit Profile</button>
               </Link>
             </div>
 
             <div className="games-box">
               <div className="tabs">
-                <button onClick={() => setActiveTab("played")}>Played</button>
-                <button onClick={() => setActiveTab("playing")}>Playing</button>
-                <button onClick={() => setActiveTab("interested")}>
+                <button
+                  className={`tab-button ${
+                    activeTab === "played" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("played")}
+                >
+                  Played
+                </button>
+                <button
+                  className={`tab-button ${
+                    activeTab === "playing" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("playing")}
+                >
+                  Playing
+                </button>
+                <button
+                  className={`tab-button ${
+                    activeTab === "interested" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("interested")}
+                >
                   Interested
                 </button>
               </div>
@@ -108,7 +125,6 @@ function Profile() {
                       game={game}
                       onOpenModal={toggleModal}
                       setGameForm={setGameForm}
-
                     />
                   ))}
                 {activeTab === "interested" &&
@@ -125,7 +141,12 @@ function Profile() {
           </div>
         </>
       )}
-      <Modal isOpen={isModalOpen} onClose={toggleModal} gameForm={gameForm} setGameForm={setGameForm}>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={toggleModal}
+        gameForm={gameForm}
+        setGameForm={setGameForm}
+      >
         {/* Content of the modal */}
       </Modal>
     </div>
