@@ -1,0 +1,68 @@
+body.active-modal {
+    overflow-y: hidden;
+}
+.add-btn-modal {
+    padding: 10px 20px;
+    display: block;
+    margin: 100px auto 2em;
+    font-size: 18px;
+    border:none;
+    background-color: #27476e;
+    border-radius: 6px;
+    font-family: "Space Mono";
+    font-weight: 600;
+    color:white;
+}
+.add-btn-modal:hover{
+    box-shadow: 2px 1px 10px #14325C;
+    color:white;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    border-radius: 10px;
+}
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.add-modal-content {
+    line-height: 1.4;
+    padding: 1vh 3vh;
+    border-radius: 10px;
+    width: 35vw;
+    height: fit-content;
+    background-color: #001D4A;
+    position: relative;
+    align-self: center;
+    overflow: none;
+    display: flex;
+    flex-direction: column;
+}
+.add-close-modal {
+    padding:1vh;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    margin-left:25%;
+    font-family: "IBM Plex Sans";
+    font-weight:600;
+    background-color: #27476e;
+}
+.add-close-modal:hover{
+    background-color: #2BBEF2;
+    box-shadow: 1px 2px 5px white;
+}
+
+.add-instruct{
+    color:white;
+    font-family:"IBM Plex Sans";
+    font-size: 1.5vh;
+    font-weight: 600;
+}
+

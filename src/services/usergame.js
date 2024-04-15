@@ -9,9 +9,9 @@ export const getUserGame = async (id) => {
     }
 };
 
-export const addUserGame = async (id, userGameData) => {
+export const addUserGame = async (userGameData) => {
     try {
-        const response =await api.post(`/games/usergames/${id}/`, userGameData);
+        const response =await api.post('/games/usergames/', userGameData);
         return response.data;
     } catch (error) {
         throw error;
