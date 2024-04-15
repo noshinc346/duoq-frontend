@@ -7,6 +7,12 @@ body{
     background-color: #001D4A;
 }
 
+.hp-img{
+    width: 100vw;
+    height: 45vh;
+    object-fit: cover;
+ }
+
 
 .home-page{
     width: 100vw;
@@ -33,31 +39,16 @@ body{
     align-items: center;
 }
 
-.intro-statement-container{
-    padding: 1em 4em;
-    background-color: rgb(39, 71, 110, .5);
-}
-
-.intro-statement{
-    font-family: "Orbitron", sans-serif;
-    color: #FFF1EB;
-    font-size: 22px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 1em 4em;
-}
-
-.games-header{
+.games-header-hp{
     font-family: 'DO Futuristic', sans-serif;
-    font-size: 45px;
+    font-size: 48px;
     color: #FFF1EB;
     padding: 1em 0;
     text-align: center;
-    margin-top: 8em;
+    margin-top: 2em;
 }
 
-.img-gallery{
+.hp-img-gallery{
     display: inline-block;
     display: flex;
     flex-direction: row;

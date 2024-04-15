@@ -7,9 +7,9 @@ body.active-modal {
     margin: 100px auto 2em;
     font-size: 18px;
     border:none;
-    background-color: #27476e;
+    background-color: #D8315B;
     border-radius: 6px;
-    font-family: "Space Mono";
+    font-family: "Orbitron", sans-serif;
     font-weight: 600;
     color:white;
 }

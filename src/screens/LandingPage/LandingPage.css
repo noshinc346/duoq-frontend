@@ -64,19 +64,30 @@ video{
 .img-gallery{
     display: inline-block;
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
     margin-top: .5em;
-    overflow: auto;
+    overflow-x: auto;
     white-space: nowrap;
-    padding: 1em 0;
+    padding-top: 1em;
+    margin-left: 0;
+    scroll-behavior: smooth;
 }
 
 .gallery-imgs{
+    flex: 0 0 auto;
     height: 600px;
     width: 375px;
     margin-right: 10px;
  }
+
+ .gallery-imgs:first-child{
+    margin-left: 0;
+ }
+
+ .img-gallery::-webkit-scrollbar {
+    display: none; 
+}
 
 

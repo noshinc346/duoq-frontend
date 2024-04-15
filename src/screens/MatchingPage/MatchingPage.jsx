@@ -110,7 +110,7 @@ function MatchingPage({ profile, setProfile }) {
           </div>
         </>
       ) : (
-        <p>Loading profiles</p>
+        <p className="loading-msg">Looks like there's no profiles at the moment. Try again later!</p>
       )}
     </div>
   );

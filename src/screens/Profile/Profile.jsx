@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { getProfile, updateGameForProfile } from "../../services/profile";
+import { getProfile, updateGameForProfile, getProfileById } from "../../services/profile.js";
 import { getUserGame, editUserGame } from "../../services/usergame.js";
 import "./Profile.css";
 import ProfileGame from "../../components/ProfileGame/ProfileGame.jsx";
@@ -18,10 +18,19 @@ function Profile() {
     id: "",
   });
 
+  const {id} = useParams()
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const profileData = await getProfile();
+        let profileData;
+
+        if (id) {
+          profileData = await getProfileById(id);
+        } else {
+          profileData = await getProfile();
+        }
+
         setProfile(profileData);
 
         const userGamesData = await getUserGame(profileData.id);
