@@ -3,3 +3,58 @@
 ::placeholder{
     color: black;
 }
+
+.edit-profile-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    max-width: 600px; /* Adjust max-width as needed */
+    margin: 0 auto;
+    padding: 10%;
+    padding-top: 75px;
+    border-radius: 8%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Adjust background size */
+    background-image: url('../../assets/gameboy.png');
+}
+
+.flex-this-shit {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    flex-direction: row;
+    width: 100%; /* Ensure full width */
+    margin-bottom: 10px; /* Add some spacing between each input group */
+  }
+  
+  .flex-this-shit p {
+    flex: 1; /* Allow <p> tags to expand to fill available space */
+    margin: 0; /* Remove default margin */
+    text-align: left; /* Align text to the left */
+    color: #427799;
+    font-weight: bold;
+}
+  
+  .flex-this-shit input {
+    flex: 2; /* Allow input fields to expand to fill available space */
+    margin-left: 10px; /* Add some spacing between <p> tag and input */
+    background-color: #98ddee;
+    text-align: center;
+  }
+
+  .profile-edit-button {
+    background-color: #427799;
+    margin-top: 20px;
+  }
+
+  .edit-profile-title {
+    margin-bottom: 10px;
+  }
+
+.actual-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
