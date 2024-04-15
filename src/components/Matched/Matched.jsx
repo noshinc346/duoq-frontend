@@ -12,9 +12,19 @@ function Matched({ match, setToggle, profile }) {
     function checkCurrentMatch() {
         // Return the name of the match
         if (match?.user1_profile?.id === profile?.id) {
-            return match?.user2_profile.name;
+            return (
+                <>
+                    <img className="matched-profile-pic" src={match.user2_profile.profile_picture}/>
+                    <h2 className="matched-profile-name">{match.user2_profile.name}</h2>
+                </>
+            )
         } else {
-            return match?.user1_profile.name;
+            return (
+                <>
+                    <img className="matched-profile-pic" src={match.user1_profile.profile_picture}/>
+                    <h2 className="matched-profile-name">{match.user1_profile.name}</h2>
+                </>
+            )
         }
     }
 
@@ -30,9 +40,9 @@ function Matched({ match, setToggle, profile }) {
     return (
         <div className='matched-info-container'>
             <h1 className='matched-name'>
-                <img className="matched-profile-pic" src={match.user2_profile.profile_picture}/>
-                <h2 className="matched-profile-name">{match.user2_profile.name}</h2>
-                {/* <Link className="matched-link"to={getProfileLink()}>{checkCurrentMatch()}</Link> */}
+                <Link className="matched-link"to={getProfileLink()}>
+                    {checkCurrentMatch()}
+                </Link>
             </h1>
             <button className='matched-button' onClick={handleDeleteMatch}>Delete</button>
         </div>

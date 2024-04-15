@@ -44,7 +44,7 @@ function App() {
       <Nav user={user}/>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/home" element={<Homepage />} />
+        {profile && <Route path="/home" element={<Homepage profile={profile}/>} />}
         <Route path="/register" element={<Register setUser={setUser} />}/>
         <Route path="/login" element={<Login setUser={setUser} setProfile={setProfile}/>} />
         <Route path="/sign-out" element={<SignOut setUser={setUser} setProfile={setProfile}/>} />

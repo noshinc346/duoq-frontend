@@ -6,26 +6,19 @@ import { getUserGame } from '../../services/usergame.js';
 import AddUserGame from '../../components/Modals/AddUserGame.jsx';
 import HPControllers from '../../assets/hpcontrollers.jpeg'
 
-function Homepage() {
+function Homepage({profile}) {
 
-	const [id, setId] = useState(null);
 	const [userGame, setUserGame] = useState([]);
 
 	const fetchUserGames = async () => {
-		const userid = await getUserId();
-		setId(userid);
-		const usergames = await getUserGame(userid);
+		const usergames = await getUserGame(profile?.id);
 		setUserGame(usergames);
 	}
 		
 
 	useEffect(() => {
 		fetchUserGames();
-	},[]);
-
-			
-	//console.log(id)
-
+	},[profile]);
 
   return (
     <div className="homepage">
@@ -48,7 +41,7 @@ function Homepage() {
 				})
 				}
          		</div>
-	  		<AddUserGame id={id} />
+	  			<AddUserGame id={profile?.id} />
         	</div>
       	</div>
     </div>
