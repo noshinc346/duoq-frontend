@@ -9,7 +9,7 @@ Find Your Gaming Crew: Connect with like-minded gamers for epic multiplayer sess
 
 Welcome to DuoQ! Our platform is designed to bring gamers together by facilitating connections based on shared gaming interests. Whether you're into competitive shooters strategy games or just a way to socialize DuoQ helps you find fellow gamers to team up with.
 
-##Wireframe 
+## Wireframe 
 
 [Figma]([https://example.com/demo](https://www.figma.com/file/P8xKmfEPJTwGf2TJD0vA0A/DuoQ?type=design&node-id=0%3A1&mode=design&t=BP20tp7628XCSKD5-1))
 
