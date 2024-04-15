@@ -11,9 +11,10 @@ function ProfileGame({ game, onOpenModal, setGameForm}) {
             <img src={game?.game.image} />
           </div>
           <div className="card-back">
-            <p className="ign-info">{game.ign}</p>
-            <p className="rank-info">{game.rank}</p>
             <p className="comp-info">{game.competitive ? "Competitive" : "Socially"}</p>
+            <hr />
+            <p className="ign-info"><strong>IGN: </strong>{game.ign}</p>
+            <p className="rank-info"><strong>RANK: </strong>{game.rank}</p>
           </div>
         </div>
       </div>

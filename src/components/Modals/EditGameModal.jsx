@@ -61,37 +61,54 @@ function Modal({ isOpen, onClose, children, game, gameForm , setGameForm, onOpen
 
   return (
     <div className="modal-overlay">
-      <div className="modal">
+      <div className="game-modal">
         <button className="modal-close-btn" onClick={onClose}>
           &times;
         </button>
         <div className="modal-content">
-        <h2>Edit Game</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder={game?.status}
-          name="status"
-          value={gameForm.status}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          placeholder="IGN"
-          name="ign"
-          value={gameForm.ign}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          placeholder="Rank"
-          name="rank"
-          value={gameForm.rank}
-          onChange={handleChange}
-        />
-        {/* Add other fields */}
-        <button type="submit">Save Changes</button>
-      </form>
+          <h2 className="form-header">Edit Game</h2>
+          <form className="edit-game-form" onSubmit={handleSubmit}>
+            <div className="status-container">
+              <p className="form-titles">Play Status</p>
+              <select
+                className="text-input"
+                value={gameForm.status}
+                onChange={(e) =>
+                  setGameForm({ ...gameForm, status: e.target.value })
+                }
+              >
+                <option value="PD">Played</option>
+                <option value="PG">Playing</option>
+                <option value="I">Interested</option>
+              </select>
+            </div>
+
+            <div className="IGN-container">
+            <p className="form-titles">In Game Name</p>
+            <input
+              className="text-input"
+              type="text"
+              placeholder="IGN"
+              name="ign"
+              value={gameForm.ign}
+              onChange={handleChange}
+            />
+            </div>
+
+            <div className="rank-container">
+            <p className="form-titles">Rank</p>
+            <input
+              className="text-input"
+              type="text"
+              placeholder="Rank"
+              name="rank"
+              value={gameForm.rank}
+              onChange={handleChange}
+            />
+            </div>
+            {/* Add other fields */}
+            <button className="edit-game-button" type="submit">Save Changes</button>
+          </form>
           {children}
         </div>
       </div>

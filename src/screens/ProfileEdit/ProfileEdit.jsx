@@ -46,9 +46,12 @@ const ProfileEdit = () => {
   };
 
   return (
-    <div>
-      <h2>Edit Profile</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="edit-profile-form-container">
+      <h2 className="edit-profile-title">Edit Profile</h2>
+      <form className="actual-form" onSubmit={handleSubmit}>
+
+        <div className="flex-this-shit nameedit-container">
+        <p>Name</p>
         <input
           type="text"
           placeholder="Display Name"
@@ -56,6 +59,10 @@ const ProfileEdit = () => {
           value={profileData.name}
           onChange={handleChange}
         />
+        </div>
+
+        <div className="flex-this-shit bioedit-container">
+        <p>Bio</p>
         <input
           type="text"
           placeholder="User Bio"
@@ -63,6 +70,11 @@ const ProfileEdit = () => {
           value={profileData.bio}
           onChange={handleChange}
         />
+        </div>
+
+
+        <div className="flex-this-shit dobedit-container">
+        <p>D.O.B</p>
         <input
           type="text"
           placeholder="Date of Birth"
@@ -70,13 +82,21 @@ const ProfileEdit = () => {
           value={profileData.dob}
           onChange={handleChange}
         />
-        <input
-          type='text'
-          placeholder="Add image url "
-          name='profile_picture'
-          value={profileData.profile_picture}
-          onChange={handleChange}
-        />
+        </div>
+
+        <div className="flex-this-shit pfpedit-container">
+          <p>Profile Picture</p>
+          <input
+            type='text'
+            placeholder="Add image url "
+            name='profile_picture'
+            value={profileData.profile_picture}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="flex-this-shit banneredit-container">
+        <p>Banner</p>
         <input
           type='text'
           placeholder="Add image url "
@@ -84,6 +104,11 @@ const ProfileEdit = () => {
           value={profileData.banner}
           onChange={handleChange}
         />
+        </div>
+
+
+        <div className="flex-this-shit genderedit-container">
+        <p>Gender</p>
         <input
           type="text"
           placeholder="Gender"
@@ -91,8 +116,9 @@ const ProfileEdit = () => {
           value={profileData.gender}
           onChange={handleChange}
         />
+        </div>
         {/* Add other fields */}
-        <button type="submit">Save Changes</button>
+        <button className="profile-edit-button" type="submit">Save Changes</button>
       </form>
     </div>
   );
