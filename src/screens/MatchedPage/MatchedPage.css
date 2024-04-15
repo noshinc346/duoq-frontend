@@ -1,29 +1,48 @@
 .matched-page-header{
     font-family: 'DO Futuristic', sans-serif;
+    font-size: 50px;
     color: #FFF1EB;
     text-align: center;
-    margin-top: 2.5em;
-    margin-bottom: 2.5em;
+    margin-top: 2em;
+    position: absolute;
+    height: 15vh;
+    width: 100vw;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
 }
 
+.matched-page-img{
+    width: 100vw;
+    height: 25vh;
+    object-fit: cover;
+}
 
-.matched-container {
+.matched-info-container{
     font-family: "Orbitron", sans-serif;
     color: #FFF1EB;
     background-color: rgb(39, 71, 110);
     border: solid 1px #FFF1EB;
-    width: 600px;
-    margin: 0 auto;
     border-radius: 10px;
-    margin-bottom: 2.5em;
+    width: 350px;
+    height: 325px;
+    margin: auto;
+    text-align: center;
+    margin-top: 3em;
 }
 
-.matched-page-info {
-    /* text-align: center; */
-    width: 200px;
-    padding: 1em;
-    border-radius: 1em;
-    margin: 0 auto;
-    margin-top: .5em;
-    margin-bottom: .5em;
+.matched-profile-pic{
+    border-radius: 100px;
+    height: 150px;
+    width: 150px;
+    margin: .5em .5em;
 }
+
+.matched-profile-name{
+    font-size: 25px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
