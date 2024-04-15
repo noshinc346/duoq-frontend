@@ -65,15 +65,17 @@ function Profile() {
                 <h1 className="profile-name">{profile.name}</h1>
               </div>
 
-              <div className="profile-bio-container">
-                <p className="profile-bio">{profile.bio}</p>
+              <div className="bio-dob-container">
+                <div className="profile-bio-container">
+                  <p className="profile-bio">{profile.bio}</p>
+                </div>
+
+                <div className="profile-dob-container">
+                  <p className="profile-dob">{profile.dob}</p>
+                </div>
               </div>
 
-              <div className="profile-dob-container">
-                <p className="profile-dob">{profile.dob}</p>
-              </div>
-
-              <Link to="/profile/edit">
+              <Link className="edit-button-link" to="/profile/edit">
                 <button>Edit Profile</button>
               </Link>
             </div>

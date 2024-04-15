@@ -3,7 +3,6 @@ import "./ProfileGame.css";
 
 function ProfileGame({ game, onOpenModal, setGameForm}) {
 
-  console.log(game)
   return (
     <div className="main">
       <div className="card">
