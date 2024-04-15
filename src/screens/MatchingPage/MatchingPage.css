@@ -112,3 +112,11 @@
     margin-bottom: 4em;
     width: 100px;
 }
+
+.loading-msg{
+    text-align: center;
+    font-family: 'DO Futuristic', sans-serif;
+    font-style: bold;
+    color: #FFF1EB;
+    font-size: 25px;
+}
