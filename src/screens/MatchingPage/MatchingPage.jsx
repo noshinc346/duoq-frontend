@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import MatchBackground from '../../assets/matchbackground.jpeg'
 import "./MatchingPage.css";
 
+const defaultProfilePicture = "https://i.imgur.com/agfEXRF.jpeg";
+const defaultBanner = "https://www.colorhexa.com/ceffeb.png";
+
 function MatchingPage({ profile, setProfile }) {
   const [profiles, setProfiles] = useState([]);
   const [index, setIndex] = useState(0);
@@ -78,14 +81,14 @@ function MatchingPage({ profile, setProfile }) {
               <div className="banner-image">
                 <img 
                 className="banner-pic" 
-                src={profiles[index].banner}
+                src={profiles[index].banner || defaultBanner}
                 alt={profiles[index].name}
                 />
               </div>
             </div>
             <img
               className="profile-pic"
-              src={profiles[index].profile_picture}
+              src={profiles[index].profile_picture || defaultProfilePicture}
               alt={profiles[index].name}
             />
             <h2 className="profile-name-header">{profiles[index].name}</h2>

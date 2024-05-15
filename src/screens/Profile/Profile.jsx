@@ -6,6 +6,9 @@ import "./Profile.css";
 import ProfileGame from "../../components/ProfileGame/ProfileGame.jsx";
 import Modal from "../../components/Modals/EditGameModal.jsx";
 
+const defaultProfilePicture = "https://i.imgur.com/agfEXRF.jpeg";
+const defaultBanner = "https://www.colorhexa.com/ceffeb.png";
+
 function Profile() {
   const [profile, setProfile] = useState(null);
   const [profileGames, setProfileGames] = useState([]);
@@ -31,6 +34,14 @@ function Profile() {
           profileData = await getProfile();
         }
 
+        // Add default values if properties are missing
+        if (!profileData.banner) {
+          profileData.banner = defaultBanner;
+        }
+        if (!profileData.profile_picture) {
+          profileData.profile_picture = defaultProfilePicture;
+        }
+
         setProfile(profileData);
 
         const userGamesData = await getUserGame(profileData.id);
@@ -52,6 +63,7 @@ function Profile() {
   };
 
   // console.log(profileGames);
+  console.log("Profile Data:", profile);
 
   return (
     <div>

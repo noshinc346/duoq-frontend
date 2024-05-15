@@ -5,6 +5,8 @@ import './Register.css'
 import pinkcontroller from "../../assets/pinkcontroller2.png"
 import Marquee from "../../components/Marquee/Marquee.jsx";
 
+const defaultProfilePicture = "https://i.imgur.com/agfEXRF.jpeg";
+const defaultBanner = "https://www.colorhexa.com/ceffeb.png";
 
 function Register({ setUser, setProfile }) {
 
@@ -72,9 +74,13 @@ function Register({ setUser, setProfile }) {
 
     try {
       const userData = await signUp(form);
-      setUser(userData);
+      setUser({
+        ...userData,
+        profilePicture: defaultProfilePicture,
+        banner: defaultBanner,
+      })
 
-      navigate("/home");
+      navigate("/profile");
     } catch (error) {
       console.error(error);
       setForm((prevForm) => ({
