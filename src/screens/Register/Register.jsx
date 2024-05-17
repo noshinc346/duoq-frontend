@@ -2,11 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { signUp } from "../../services/user.js";
 import './Register.css'
-import pinkcontroller from "../../assets/pinkcontroller2.png"
 import Marquee from "../../components/Marquee/Marquee.jsx";
-
-const defaultProfilePicture = "https://i.imgur.com/agfEXRF.jpeg";
-const defaultBanner = "https://www.colorhexa.com/ceffeb.png";
 
 function Register({ setUser, setProfile }) {
 
@@ -74,11 +70,7 @@ function Register({ setUser, setProfile }) {
 
     try {
       const userData = await signUp(form);
-      setUser({
-        ...userData,
-        profilePicture: defaultProfilePicture,
-        banner: defaultBanner,
-      })
+      setUser(userData)
 
       navigate("/profile");
     } catch (error) {
