@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { signUp } from "../../services/user.js";
 import './Register.css'
-import pinkcontroller from "../../assets/pinkcontroller2.png"
 import Marquee from "../../components/Marquee/Marquee.jsx";
-
 
 function Register({ setUser, setProfile }) {
 
@@ -72,9 +70,9 @@ function Register({ setUser, setProfile }) {
 
     try {
       const userData = await signUp(form);
-      setUser(userData);
+      setUser(userData)
 
-      navigate("/home");
+      navigate("/profile");
     } catch (error) {
       console.error(error);
       setForm((prevForm) => ({

@@ -52,3 +52,7 @@
     padding: 20px;
     transform: rotateY(180deg);
   }
+
+  .edit-container {
+    margin-top: 20px;
+  }
