@@ -5,6 +5,7 @@ import { getUserGame, editUserGame } from "../../services/usergame.js";
 import "./Profile.css";
 import ProfileGame from "../../components/ProfileGame/ProfileGame.jsx";
 import Modal from "../../components/Modals/EditGameModal.jsx";
+import AuthService from "../../services/authService.js";
 
 const defaultProfilePicture = "https://i.imgur.com/agfEXRF.jpeg";
 const defaultBanner = "https://www.colorhexa.com/ceffeb.png";
@@ -54,6 +55,11 @@ function Profile() {
     fetchData();
   }, []);
 
+  const loggedInUserId = AuthService.getLoggedInUserId(); // Get logged-in user's ID
+  console.log("this is logged in user ID: ", loggedInUserId)
+  // console.log("this is profile user ID: ", profile.id)
+
+
   const filterGamesByStatus = (status) => {
     return profileGames.filter((game) => game.status === status);
   };
@@ -63,7 +69,7 @@ function Profile() {
   };
 
   // console.log(profileGames);
-  // console.log("Profile Data:", profile);
+  console.log("Profile Data:", profile);
 
   return (
     <div>
@@ -96,9 +102,15 @@ function Profile() {
                 </div>
               </div>
 
-              <Link className="edit-button-link" to="/profile/edit">
+              {/* Conditionally render Edit Profile button */}
+              {profile.id === loggedInUserId && (
+                <Link className="edit-button-link" to="/profile/edit">
+                  <button>Edit Profile</button>
+                </Link>
+              )}
+              {/* <Link className="edit-button-link" to="/profile/edit">
                 <button>Edit Profile</button>
-              </Link>
+              </Link> */}
             </div>
 
             <div className="games-box">
