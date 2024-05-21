@@ -35,12 +35,12 @@ const ProfileEdit = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-
       await updateProfile(profileData.id, profileData); // Assuming profileData contains an 'id' field
 
       navigate("/profile");
     } catch (error) {
       console.error("Error updating profile:", error);
+      console.log(error.response)
       // Handle error, show error message, etc.
     }
   };
@@ -76,7 +76,7 @@ const ProfileEdit = () => {
         <div className="flex-this-shit dobedit-container">
         <p>D.O.B</p>
         <input
-          type="text"
+          type="date"
           placeholder="Date of Birth"
           name="dob"
           value={profileData.dob}

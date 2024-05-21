@@ -4,6 +4,7 @@ import {getUserGame, editUserGame } from "../../services/usergame.js";
 import {getProfile} from "../../services/profile.js"
 
 import './ModalGame.css';
+import ProfileGame from "../ProfileGame/ProfileGame.jsx";
 
 function Modal({ isOpen, onClose, children, game, gameForm , setGameForm, onOpenModal }) {
   const navigate = useNavigate();
@@ -13,9 +14,7 @@ function Modal({ isOpen, onClose, children, game, gameForm , setGameForm, onOpen
 
   const [profileGames, setProfileGames] = useState([]);
 
-
-  
-
+// console.log("this is gameform", gameForm)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,8 +23,8 @@ function Modal({ isOpen, onClose, children, game, gameForm , setGameForm, onOpen
         setProfile(profileData);
 
         const userGamesData = await getUserGame(profileData.id);
+        // console.log("HERLEKAJS", userGamesData)
         setProfileGames(userGamesData);
-
       } catch (error) {
         console.error("Error fetching profile data:", error);
       }
@@ -45,11 +44,12 @@ function Modal({ isOpen, onClose, children, game, gameForm , setGameForm, onOpen
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await editUserGame(gameForm.id, gameForm); // Assuming profileData contains an 'id' field
+      let response = await editUserGame(gameForm.id, gameForm); // Assuming profileData contains an 'id' field
       onClose()
       window.location.reload()
     } catch (error) {
       console.error("Error updating profile:", error);
+
       // Handle error, show error message, etc.
     }
   };
