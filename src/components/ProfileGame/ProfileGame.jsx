@@ -2,7 +2,7 @@ import React from "react";
 import "./ProfileGame.css";
 
 function ProfileGame({ game, onOpenModal, setGameForm}) {
-
+// console.log("this is game", game.game.id)
   return (
     <div className="main">
       <div className="card">
@@ -25,7 +25,7 @@ function ProfileGame({ game, onOpenModal, setGameForm}) {
               'status': game.status,
               'ign': game.ign, 
               'rank': game.rank,
-              'id' : game.id
+              'id' : game.game.id
             })
             onOpenModal()
           }}>Edit</button>

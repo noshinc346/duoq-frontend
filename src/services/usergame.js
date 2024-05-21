@@ -30,6 +30,7 @@ export const getAUserGame = async (gameid) => {
 export const editUserGame = async (gameid, newData) => {
 	try {
 		const resp = await api.patch(`/games/usergames/detail/${gameid}/`, newData);
+		console.log(gameid)
 		return resp.data;
 	} catch (error) {
 		throw error;

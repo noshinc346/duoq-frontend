@@ -63,7 +63,7 @@ function Profile() {
   };
 
   // console.log(profileGames);
-  console.log("Profile Data:", profile);
+  // console.log("Profile Data:", profile);
 
   return (
     <div>
