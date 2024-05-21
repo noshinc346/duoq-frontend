@@ -6,12 +6,12 @@ import "./ProfileEdit.css"
 const ProfileEdit = () => {
   const navigate = useNavigate();
   const [profileData, setProfileData] = useState({
-    bio: "",
-    name: "",
-    dob: "",
-    profile_picture: "",
-    banner: "",
-    gender: "",
+    bio: null,
+    name: null,
+    dob: null,
+    profile_picture: null,
+    banner: null,
+    gender: null,
     // Add other profile fields as needed
   });
 
@@ -56,7 +56,7 @@ const ProfileEdit = () => {
           type="text"
           placeholder="Display Name"
           name="name"
-          value={profileData.name}
+          value={profileData.name ?? ""}
           onChange={handleChange}
         />
         </div>
@@ -67,7 +67,7 @@ const ProfileEdit = () => {
           type="text"
           placeholder="User Bio"
           name="bio"
-          value={profileData.bio}
+          value={profileData.bio ?? ""}
           onChange={handleChange}
         />
         </div>
@@ -79,7 +79,7 @@ const ProfileEdit = () => {
           type="date"
           placeholder="Date of Birth"
           name="dob"
-          value={profileData.dob}
+          value={profileData.dob ?? ""}
           onChange={handleChange}
         />
         </div>
@@ -90,7 +90,7 @@ const ProfileEdit = () => {
             type='text'
             placeholder="Add image url "
             name='profile_picture'
-            value={profileData.profile_picture}
+            value={profileData.profile_picture ?? ""}
             onChange={handleChange}
           />
         </div>
@@ -101,7 +101,7 @@ const ProfileEdit = () => {
           type='text'
           placeholder="Add image url "
           name='banner'
-          value={profileData.banner}
+          value={profileData.banner ?? ""}
           onChange={handleChange}
         />
         </div>
@@ -113,7 +113,7 @@ const ProfileEdit = () => {
           type="text"
           placeholder="Gender"
           name="gender"
-          value={profileData.gender}
+          value={profileData.gender ?? ""}
           onChange={handleChange}
         />
         </div>
