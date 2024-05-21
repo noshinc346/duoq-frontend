@@ -53,7 +53,7 @@ function Profile() {
     };
 
     fetchData();
-  }, []);
+  }, [id]);
 
   const loggedInUserId = AuthService.getLoggedInUserId(); // Get logged-in user's ID
   console.log("this is logged in user ID: ", loggedInUserId)
