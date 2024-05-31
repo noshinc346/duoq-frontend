@@ -16,7 +16,6 @@ function LandingPage() {
     <div className="lp-container">
     <video className="lp-video" src={DuoControllers} autoPlay loop muted />
     <h1 className="intro">Welcome to DuoQ</h1>
-    <div className="intro-statement-container">
     <p className="intro-statement">
           DuoQ is your go-to app for finding your gaming soulmate.
           <br/>
@@ -26,7 +25,6 @@ function LandingPage() {
           <br/>
           Join now and elevate your gaming experience to new heights!
          </p>
-    </div>
     <h3 className="games-header-one">Games</h3>
      <div className="img-gallery">
       {images.map((image, index) => (

@@ -15,7 +15,7 @@ body{
 
 video{
    width: 100vw;
-   height: 45vh;
+   height: 75vh;
    object-fit: cover;
 }
 
@@ -25,7 +25,7 @@ video{
 }
 
 .intro{
-    font-family: 'DO Futuristic', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 60px;
     color: #FFF1EB;
     text-align: center;
@@ -39,22 +39,27 @@ video{
     align-items: center;
 }
 
-.intro-statement-container{
-    background-color: rgb(39, 71, 110, .5);
-}
-
 .intro-statement{
     font-family: "Orbitron", sans-serif;
     color: #FFF1EB;
-    font-size: 24px;
-    display: flex;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 14em;
+    position: absolute;
+    height: 40vh;
+    width: 100vw;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    /* display: flex;
     justify-content: center;
     text-align: center;
-    margin: 1em 4em;
+    margin: 1em 4em; */
 }
 
 .games-header-one{
-    font-family: 'DO Futuristic', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 45px;
     color: #FFF1EB;
     text-align: center;
